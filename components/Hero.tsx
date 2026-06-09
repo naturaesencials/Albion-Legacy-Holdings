@@ -45,7 +45,7 @@ export default function Hero() {
             color: '#C9A96E',
             marginBottom: '32px',
           }}>
-            Private Capital · London
+            London · Private Capital
           </p>
 
           <h1 style={{
@@ -57,9 +57,9 @@ export default function Hero() {
             color: '#ffffff',
             marginBottom: '36px',
           }}>
-            Building<br />
-            Legacy<br />
-            <em style={{ fontStyle: 'italic', color: '#C9A96E' }}>Through Vision</em>
+            Capital with<br />
+            Conviction.<br />
+            <em style={{ fontStyle: 'italic', color: '#C9A96E' }}>Legacy by Design.</em>
           </h1>
 
           <div style={{ width: '64px', height: '2px', background: '#C9A96E', marginBottom: '36px', opacity: 0.7 }} />
@@ -74,7 +74,7 @@ export default function Hero() {
             marginBottom: '52px',
             letterSpacing: '0.01em',
           }}>
-            A private, family-owned investment holding company deploying long-term capital to create, build and expand exceptional companies.
+            A privately held UK holding company. We build, own and govern businesses for the long term — with our own capital, on our own terms.
           </p>
 
           <a href="#about" style={{

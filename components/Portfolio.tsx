@@ -4,225 +4,136 @@ const ventures = [
   {
     category: 'Digital Ecosystem',
     name: 'Albion Wealth App',
-    description:
-      'Multi-country personal wealth management platform. Supports all EU markets, UK, and USA. Built for the sophisticated user who lives and invests across borders.',
+    description: 'Multi-country personal wealth management platform. Built for the sophisticated investor who lives and operates across borders.',
     url: 'https://albionwealth.app',
     tag: 'SaaS · Fintech',
-    status: 'Live',
   },
   {
     category: 'Digital Ecosystem',
     name: 'Albion Business Hub',
-    description:
-      'Central hub connecting all Albion business tools. Designed for operators managing complex multi-entity structures with precision and clarity.',
+    description: 'Central operating hub for the Albion digital ecosystem. Precision tooling for complex multi-entity structures.',
     url: 'https://albionbusinesshub.app',
     tag: 'SaaS · Operations',
-    status: 'Live',
-  },
-  {
-    category: 'Digital Ecosystem',
-    name: 'Albion Assistant',
-    description:
-      'AI-powered administrative assistant automating operational tasks across all entities within the holding.',
-    url: '#',
-    tag: 'AI · Automation',
-    status: 'In Development',
   },
   {
     category: 'Consumer Brand',
     name: 'Natura Esencials',
-    description:
-      'Artisanal natural cosmetics, home care, and pet care brand. ISO 16128-certified. Operating across the EU and UK markets.',
+    description: 'Artisanal natural cosmetics, home care, and pet care. ISO 16128-certified. Active in EU and UK markets.',
     url: 'https://naturaesencials.com',
     tag: 'Consumer · FMCG',
-    status: 'Live',
   },
 ]
 
 export default function Portfolio() {
   return (
-    <section
-      id="portfolio"
-      className="section"
-      style={{
-        padding: 'clamp(80px, 12vw, 160px) clamp(24px, 8vw, 120px)',
-        background: 'rgba(12,16,32,0.5)',
-      }}
-    >
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        {/* Header */}
-        <div style={{ marginBottom: '80px' }}>
-          <p
-            style={{
-              fontFamily: 'Jost, system-ui, sans-serif',
-              fontSize: '10px',
-              fontWeight: 400,
-              letterSpacing: '0.28em',
-              textTransform: 'uppercase',
-              color: '#C9A96E',
-              marginBottom: '20px',
-            }}
-          >
-            Portfolio
-          </p>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'flex-end',
-              flexWrap: 'wrap',
-              gap: '24px',
-            }}
-          >
-            <h2
-              style={{
-                fontFamily: 'Cormorant Garamond, Georgia, serif',
-                fontSize: 'clamp(36px, 5vw, 60px)',
-                fontWeight: 300,
-                lineHeight: 1.1,
-                color: '#F0EDE8',
-                letterSpacing: '-0.01em',
-              }}
-            >
-              Our Ventures
+    <section id="portfolio" className="section" style={{
+      padding: 'clamp(80px, 10vw, 130px) clamp(32px, 8vw, 120px)',
+      background: '#0a0a0a',
+    }}>
+      <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-end',
+          flexWrap: 'wrap',
+          gap: '24px',
+          marginBottom: '64px',
+        }}>
+          <div>
+            <p style={{
+              fontFamily: "'Jost', system-ui, sans-serif",
+              fontSize: '10px', fontWeight: 600,
+              letterSpacing: '0.3em', textTransform: 'uppercase',
+              color: '#C9A96E', marginBottom: '20px',
+            }}>Portfolio</p>
+            <h2 style={{
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontSize: 'clamp(38px, 5vw, 60px)',
+              fontWeight: 600, lineHeight: 1.05,
+              letterSpacing: '-0.02em', color: '#ffffff',
+            }}>
+              Operating Ventures
             </h2>
-            <p
-              style={{
-                fontFamily: 'Inter, system-ui, sans-serif',
-                fontSize: '13px',
-                fontWeight: 300,
-                color: '#8A8A9A',
-                maxWidth: '360px',
-                lineHeight: 1.6,
-              }}
-            >
-              Operating businesses and digital ventures held and governed
-              directly by Albion Legacy Holdings.
-            </p>
           </div>
+          <p style={{
+            fontFamily: "'Inter', system-ui, sans-serif",
+            fontSize: '14px', fontWeight: 300,
+            color: 'rgba(255,255,255,0.4)',
+            maxWidth: '320px', lineHeight: 1.7,
+          }}>
+            Businesses held and governed directly by Albion Legacy Holdings.
+          </p>
         </div>
 
-        {/* Grid */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '1px',
-            background: 'rgba(240,237,232,0.06)',
-          }}
-        >
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '1px',
+          background: 'rgba(255,255,255,0.06)',
+        }}>
           {ventures.map((v, i) => (
             <a
               key={i}
               href={v.url}
-              target={v.url !== '#' ? '_blank' : undefined}
+              target="_blank"
               rel="noopener noreferrer"
               style={{
                 display: 'block',
-                padding: '40px 36px',
-                background: '#08090E',
+                padding: '44px 40px',
+                background: '#0a0a0a',
                 textDecoration: 'none',
-                transition: 'background 0.3s ease',
-                cursor: v.url === '#' ? 'default' : 'pointer',
+                transition: 'background 0.25s ease',
               }}
-              onMouseEnter={(e) => {
-                if (v.url !== '#') (e.currentTarget as HTMLElement).style.background = '#0C1020'
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.background = '#08090E'
-              }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = '#111111')}
+              onMouseLeave={(e) => (e.currentTarget.style.background = '#0a0a0a')}
             >
-              {/* Category */}
-              <p
-                style={{
-                  fontFamily: 'Jost, system-ui, sans-serif',
-                  fontSize: '9px',
-                  fontWeight: 400,
-                  letterSpacing: '0.22em',
-                  textTransform: 'uppercase',
-                  color: '#8A8A9A',
-                  marginBottom: '20px',
-                }}
-              >
-                {v.category}
-              </p>
+              <p style={{
+                fontFamily: "'Jost', system-ui, sans-serif",
+                fontSize: '9px', fontWeight: 500,
+                letterSpacing: '0.22em', textTransform: 'uppercase',
+                color: '#555555', marginBottom: '20px',
+              }}>{v.category}</p>
 
-              {/* Name */}
-              <h3
-                style={{
-                  fontFamily: 'Cormorant Garamond, Georgia, serif',
-                  fontSize: '26px',
-                  fontWeight: 400,
-                  color: '#F0EDE8',
-                  marginBottom: '16px',
-                  lineHeight: 1.2,
-                }}
-              >
-                {v.name}
-              </h3>
+              <h3 style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: '28px', fontWeight: 600,
+                color: '#ffffff', marginBottom: '16px',
+                lineHeight: 1.15, letterSpacing: '-0.01em',
+              }}>{v.name}</h3>
 
-              {/* Description */}
-              <p
-                style={{
-                  fontFamily: 'Inter, system-ui, sans-serif',
-                  fontSize: '13px',
-                  fontWeight: 300,
-                  lineHeight: 1.7,
-                  color: 'rgba(240,237,232,0.55)',
-                  marginBottom: '32px',
-                }}
-              >
-                {v.description}
-              </p>
+              <p style={{
+                fontFamily: "'Inter', system-ui, sans-serif",
+                fontSize: '13px', fontWeight: 300,
+                lineHeight: 1.75,
+                color: 'rgba(255,255,255,0.4)',
+                marginBottom: '36px',
+              }}>{v.description}</p>
 
-              {/* Footer */}
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: 'Jost, system-ui, sans-serif',
-                    fontSize: '9px',
-                    fontWeight: 400,
-                    letterSpacing: '0.16em',
-                    textTransform: 'uppercase',
-                    color: '#C9A96E',
-                  }}
-                >
-                  {v.tag}
-                </span>
-                <span
-                  style={{
-                    fontFamily: 'Jost, system-ui, sans-serif',
-                    fontSize: '9px',
-                    fontWeight: 400,
-                    letterSpacing: '0.16em',
-                    textTransform: 'uppercase',
-                    color: v.status === 'Live' ? 'rgba(201,169,110,0.6)' : '#8A8A9A',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                  }}
-                >
-                  <span
-                    style={{
-                      width: '5px',
-                      height: '5px',
-                      borderRadius: '50%',
-                      background: v.status === 'Live' ? '#C9A96E' : '#8A8A9A',
-                      opacity: v.status === 'Live' ? 1 : 0.4,
-                    }}
-                  />
-                  {v.status}
-                </span>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                borderTop: '1px solid rgba(255,255,255,0.06)',
+                paddingTop: '20px',
+              }}>
+                <span style={{
+                  fontFamily: "'Jost', system-ui, sans-serif",
+                  fontSize: '9px', fontWeight: 500,
+                  letterSpacing: '0.14em', textTransform: 'uppercase',
+                  color: '#C9A96E',
+                }}>{v.tag}</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="rgba(255,255,255,0.2)" strokeWidth="2"
+                  strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"/>
+                  <polyline points="7 7 17 7 17 17"/>
+                </svg>
               </div>
             </a>
           ))}
         </div>
+
       </div>
     </section>
   )
