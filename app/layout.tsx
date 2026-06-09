@@ -1,0 +1,89 @@
+import type { Metadata } from 'next'
+import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'Albion Legacy Holdings | Private Investment Holding · London',
+  description: 'Albion Legacy Holdings is a UK-incorporated, privately held investment holding company deploying long-term capital across operating businesses, digital ventures, and strategic assets.',
+  keywords: 'Albion Legacy Holdings, private holding company, UK investment holding, family office, long-term capital, digital ventures',
+  authors: [{ name: 'Albion Legacy Holdings Ltd' }],
+  creator: 'Albion Legacy Holdings Ltd',
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: 'https://www.albionlegacy.com',
+    siteName: 'Albion Legacy Holdings',
+    title: 'Albion Legacy Holdings | Private Investment Holding · London',
+    description: 'A UK-incorporated, privately held investment holding company deploying long-term capital across operating businesses, digital ventures, and strategic assets.',
+    images: [
+      {
+        url: 'https://www.albionlegacy.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Albion Legacy Holdings',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Albion Legacy Holdings | Private Investment Holding · London',
+    description: 'A UK-incorporated, privately held investment holding company deploying long-term capital across operating businesses, digital ventures, and strategic assets.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: 'https://www.albionlegacy.com',
+  },
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Albion Legacy Holdings Ltd',
+  url: 'https://www.albionlegacy.com',
+  logo: 'https://www.albionlegacy.com/logo.png',
+  description: 'A UK-incorporated, privately held investment holding company deploying long-term capital across operating businesses, digital ventures, and international assets.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '66 Paul Street',
+    addressLocality: 'London',
+    postalCode: 'EC2A 4NA',
+    addressCountry: 'GB',
+  },
+  areaServed: 'Worldwide',
+  foundingLocation: {
+    '@type': 'Place',
+    name: 'London, United Kingdom',
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/albion-legacy-holdings',
+    'https://albionwealth.app',
+    'https://albionbusinesshub.app',
+    'https://naturaesencials.com',
+  ],
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
+      <body>{children}</body>
+    </html>
+  )
+}
