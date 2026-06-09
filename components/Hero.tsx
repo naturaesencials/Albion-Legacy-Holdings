@@ -20,14 +20,7 @@ export default function Hero() {
         pointerEvents: 'none',
       }} />
 
-      {/* Línea dorada decorativa vertical */}
-      <div style={{
-        position: 'absolute',
-        left: 'clamp(40px, 6vw, 80px)',
-        top: '15%', bottom: '15%',
-        width: '1px',
-        background: 'linear-gradient(to bottom, transparent, rgba(201,169,110,0.3) 30%, rgba(201,169,110,0.3) 70%, transparent)',
-      }} />
+
 
       {/* Contenido principal */}
       <div style={{
