@@ -151,8 +151,8 @@ export default function Hero() {
       <style>{`
         @media (max-width: 900px) {
           .hero-inner { flex-direction: column !important; padding: 120px 32px 48px !important; gap: 48px !important; }
-          .hero-logo { order: -1; }
-          .hero-logo svg { width: 200px !important; height: auto !important; }
+          .hero-logo { display: none !important; }
+          
           .stats-bar { padding: 0 24px !important; }
         }
       `}</style>
