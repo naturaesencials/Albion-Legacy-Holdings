@@ -66,7 +66,7 @@ export default function Contact() {
           </p>
 
           <a
-            href="mailto:hello@albionlegacy.com"
+            href="mailto:contact@albionlegacy.com"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '14px',
               background: '#ffffff', color: '#0a0a0a',
@@ -104,17 +104,27 @@ export default function Contact() {
         <p style={{
           fontFamily: "'Inter', system-ui, sans-serif",
           fontSize: '12px', fontWeight: 300,
-          color: '#444444', letterSpacing: '0.03em',
+          color: '#888888', letterSpacing: '0.03em',
         }}>
-          © {new Date().getFullYear()} Albion Legacy Holdings Ltd · 66 Paul Street, London EC2A 4NA
+          © {new Date().getFullYear()} Albion Legacy Holdings Ltd · 71-75 Shelton Street, Covent Garden, London WC2H 9JQ
         </p>
-        <p style={{
-          fontFamily: "'Jost', system-ui, sans-serif",
-          fontSize: '11px', fontWeight: 400,
-          color: '#333333', letterSpacing: '0.1em',
-        }}>
-          albionlegacy.com
-        </p>
+        <div style={{ display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <a
+            href="https://www.linkedin.com/company/albion-legacy-holdings"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "'Jost', system-ui, sans-serif",
+              fontSize: '11px', fontWeight: 400,
+              color: '#888888', letterSpacing: '0.1em',
+              textDecoration: 'none', transition: 'color 0.2s',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = '#C9A96E')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#888888')}
+          >
+            LinkedIn
+          </a>
+        </div>
       </footer>
     </>
   )
