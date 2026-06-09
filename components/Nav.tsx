@@ -1,37 +1,40 @@
 'use client'
 import { useState, useEffect } from 'react'
 
-function LogoHorizontal({ color = '#ffffff', width = 280 }: { color?: string; width?: number }) {
-  const height = width * (220 / 900)
+function LogoHorizontal({ color = '#ffffff', width = 240 }: { color?: string; width?: number }) {
+  const height = width * (200 / 900)
+  const bg = color === '#0a0a0a' ? '#ffffff' : '#0a0a0a'
   return (
-    <svg width={width} height={height} viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(110, 110) scale(0.38)">
-        <path d="M0 -80 C70 -80 115 -52 135 -42 L135 62 C135 135 75 185 0 220 C-75 185 -135 135 -135 62 L-135 -42 C-115 -52 -70 -80 0 -80 Z"
-          fill="none" stroke={color} strokeWidth="18" strokeLinejoin="round" />
-        <rect x="-62.5" y="12" width="27.5" height="102.5" fill={color} />
-        <rect x="-13.75" y="-5.5" width="27.5" height="120" fill={color} />
-        <rect x="35" y="12" width="27.5" height="102.5" fill={color} />
-        <rect x="-72.5" y="122" width="145" height="11" fill={color} />
-        <g transform="translate(0, 220)">
-          <circle cx="0" cy="0" r="16" fill="rgba(0,0,0,0.85)" stroke={color} strokeWidth="1.1" />
+    <svg width={width} height={height} viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(90, 0)">
+        <path d="M0 8 C46 8 72 26 82 34 L82 106 C82 146 50 164 0 172 C-50 164 -82 146 -82 106 L-82 34 C-72 26 -46 8 0 8 Z"
+          fill="none" stroke={color} strokeWidth="5.5" strokeLinejoin="round"/>
+        <rect x="-38" y="58" width="17" height="68" fill={color}/>
+        <rect x="-8.5" y="46" width="17" height="80" fill={color}/>
+        <rect x="21" y="58" width="17" height="68" fill={color}/>
+        <rect x="-45" y="130" width="90" height="7" fill={color}/>
+        <g transform="translate(0, 172)">
+          <circle cx="0" cy="0" r="20" fill={bg} stroke={color} strokeWidth="1.8"/>
           <g opacity="0.18">
-            <line x1="0" y1="-22" x2="0" y2="22" stroke={color} strokeWidth="6" strokeLinecap="round" />
-            <line x1="-22" y1="0" x2="22" y2="0" stroke={color} strokeWidth="6" strokeLinecap="round" />
+            <line x1="0" y1="-27" x2="0" y2="27" stroke={color} strokeWidth="7" strokeLinecap="round"/>
+            <line x1="-27" y1="0" x2="27" y2="0" stroke={color} strokeWidth="7" strokeLinecap="round"/>
           </g>
-          <line x1="0" y1="-22" x2="0" y2="22" stroke={color} strokeWidth="1.1" strokeLinecap="round" />
-          <line x1="-22" y1="0" x2="22" y2="0" stroke={color} strokeWidth="1.1" strokeLinecap="round" />
-          <circle cx="0" cy="0" r="4.8" fill="none" stroke={color} strokeWidth="0.9" />
-          <circle cx="0"    cy="-7"   r="2.1" fill={color} />
-          <circle cx="6.6"  cy="-2.1" r="2.1" fill={color} />
-          <circle cx="4.1"  cy="5.7"  r="2.1" fill={color} />
-          <circle cx="-4.1" cy="5.7"  r="2.1" fill={color} />
-          <circle cx="-6.6" cy="-2.1" r="2.1" fill={color} />
-          <circle cx="0" cy="0" r="1.5" fill={color} />
+          <line x1="0" y1="-27" x2="0" y2="27" stroke={color} strokeWidth="1.6" strokeLinecap="round"/>
+          <line x1="-27" y1="0" x2="27" y2="0" stroke={color} strokeWidth="1.6" strokeLinecap="round"/>
+          <circle cx="0" cy="0" r="6" fill="none" stroke={color} strokeWidth="1.3"/>
+          <circle cx="0"    cy="-8.8" r="2.7" fill={color}/>
+          <circle cx="8.4"  cy="-2.7" r="2.7" fill={color}/>
+          <circle cx="5.2"  cy="7.1"  r="2.7" fill={color}/>
+          <circle cx="-5.2" cy="7.1"  r="2.7" fill={color}/>
+          <circle cx="-8.4" cy="-2.7" r="2.7" fill={color}/>
+          <circle cx="0" cy="0" r="1.9" fill={color}/>
         </g>
       </g>
-      <g transform="translate(220, 0)">
-        <text x="0" y="115" fontFamily="Georgia, 'Times New Roman', serif" fontSize="52" fontWeight="500" letterSpacing="7" fill={color}>ALBION LEGACY</text>
-        <text x="2" y="148" fontFamily="Arial, Helvetica, sans-serif" fontSize="20" letterSpacing="11" fill={color} opacity="0.92">HOLDINGS</text>
+      <g transform="translate(196, 0)">
+        <text x="0" y="100" fontFamily="Georgia,'Times New Roman',serif"
+          fontSize="54" fontWeight="500" letterSpacing="6" fill={color}>ALBION LEGACY</text>
+        <text x="2" y="136" fontFamily="Arial,Helvetica,sans-serif"
+          fontSize="21" letterSpacing="11.5" fill={color} opacity="0.85">HOLDINGS</text>
       </g>
     </svg>
   )
