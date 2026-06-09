@@ -1,3 +1,5 @@
+import AlbionLogo from './AlbionLogo'
+
 export default function Hero() {
   return (
     <section
@@ -5,150 +7,172 @@ export default function Hero() {
       className="section"
       style={{
         minHeight: '100vh',
+        background: 'linear-gradient(135deg, #0a0a0a 0%, #141414 50%, #1a1a1a 100%)',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '0 24px',
-        textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Radial glow */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '600px',
-          height: '600px',
-          background: 'radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }}
-      />
+      {/* Subtle radial glow */}
+      <div style={{
+        position: 'absolute',
+        top: '40%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '800px',
+        height: '600px',
+        background: 'radial-gradient(ellipse, rgba(201,169,110,0.05) 0%, transparent 65%)',
+        pointerEvents: 'none',
+      }} />
 
-      {/* Eyebrow */}
-      <p
-        className="animate-fade-up animate-delay-1"
-        style={{
-          fontFamily: 'Jost, system-ui, sans-serif',
-          fontSize: '10px',
-          fontWeight: 400,
-          letterSpacing: '0.28em',
-          textTransform: 'uppercase',
-          color: '#C9A96E',
-          marginBottom: '32px',
-        }}
+      {/* Main hero content */}
+      <div style={{
+        flex: 1,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 'clamp(100px, 14vw, 160px) clamp(24px, 8vw, 80px) 80px',
+        maxWidth: '1400px',
+        margin: '0 auto',
+        width: '100%',
+        gap: '80px',
+      }}
+      className="hero-inner"
       >
-        London · Est. 2024 · Private Capital
-      </p>
+        {/* Left — text */}
+        <div style={{ flex: 1, minWidth: '320px' }} className="hero-text">
+          <p style={{
+            fontFamily: 'Jost, system-ui, sans-serif',
+            fontSize: '12px',
+            fontWeight: 400,
+            letterSpacing: '0.32em',
+            textTransform: 'uppercase',
+            color: '#888888',
+            marginBottom: '28px',
+          }}>
+            Private Capital
+          </p>
 
-      {/* Main headline */}
-      <h1
-        className="animate-fade-up animate-delay-2"
-        style={{
-          fontFamily: 'Cormorant Garamond, Georgia, serif',
-          fontSize: 'clamp(48px, 8vw, 96px)',
-          fontWeight: 300,
-          lineHeight: 1.05,
-          letterSpacing: '-0.01em',
-          color: '#F0EDE8',
-          maxWidth: '900px',
-          marginBottom: '32px',
-        }}
-      >
-        Building Legacy
-        <br />
-        <em style={{ fontStyle: 'italic', color: '#C9A96E' }}>Through Vision</em>
-      </h1>
+          <h1 style={{
+            fontFamily: 'Cormorant Garamond, Georgia, serif',
+            fontSize: 'clamp(44px, 6vw, 76px)',
+            fontWeight: 700,
+            lineHeight: 1.05,
+            letterSpacing: '-0.03em',
+            color: '#ffffff',
+            marginBottom: '32px',
+          }}>
+            Building Legacy<br />Through Vision
+          </h1>
 
-      {/* Sub */}
-      <p
-        className="animate-fade-up animate-delay-3"
-        style={{
-          fontFamily: 'Inter, system-ui, sans-serif',
-          fontSize: '15px',
-          fontWeight: 300,
-          lineHeight: 1.7,
-          color: '#8A8A9A',
-          maxWidth: '480px',
-          marginBottom: '64px',
-          letterSpacing: '0.02em',
-        }}
-      >
-        A privately held UK holding company deploying long-term capital
-        to create, build, and expand exceptional businesses.
-      </p>
+          <div style={{
+            width: '80px',
+            height: '3px',
+            background: '#ffffff',
+            marginBottom: '32px',
+          }} />
 
-      {/* Divider + stats */}
-      <div
-        className="animate-fade-up animate-delay-4"
-        style={{
+          <p style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontSize: 'clamp(16px, 1.8vw, 20px)',
+            fontWeight: 400,
+            lineHeight: 1.7,
+            color: '#cccccc',
+            maxWidth: '560px',
+            marginBottom: '48px',
+          }}>
+            A private, family-owned investment holding company deploying long-term capital to create, build and expand exceptional companies.
+          </p>
+
+          <a
+            href="#about"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '12px',
+              background: '#ffffff',
+              color: '#0a0a0a',
+              fontFamily: 'Jost, system-ui, sans-serif',
+              fontSize: '14px',
+              fontWeight: 700,
+              letterSpacing: '0.06em',
+              padding: '18px 36px',
+              textDecoration: 'none',
+              transition: 'background 0.2s',
+            }}
+          >
+            Explore Our Approach
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        {/* Right — logo */}
+        <div style={{
           display: 'flex',
-          gap: '64px',
           alignItems: 'center',
           justifyContent: 'center',
-          flexWrap: 'wrap',
-        }}
-      >
-        {[
-          { value: 'UK', label: 'Incorporated' },
-          { value: 'Int\'l', label: 'Reach' },
-          { value: 'Long-Term', label: 'Capital Horizon' },
-          { value: 'Private', label: 'Ownership' },
-        ].map((stat, i) => (
-          <div key={i} style={{ textAlign: 'center' }}>
-            <p
-              style={{
-                fontFamily: 'Cormorant Garamond, Georgia, serif',
-                fontSize: '22px',
-                fontWeight: 400,
-                color: '#F0EDE8',
-                letterSpacing: '0.04em',
-              }}
-            >
-              {stat.value}
-            </p>
-            <p
-              style={{
-                fontFamily: 'Jost, system-ui, sans-serif',
-                fontSize: '9px',
-                fontWeight: 400,
-                letterSpacing: '0.22em',
-                textTransform: 'uppercase',
-                color: '#8A8A9A',
-                marginTop: '4px',
-              }}
-            >
-              {stat.label}
-            </p>
-          </div>
-        ))}
+          flexShrink: 0,
+        }} className="hero-logo">
+          <AlbionLogo size={220} color="#ffffff" />
+        </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '40px',
-          left: '50%',
-          transform: 'translateX(-50%)',
+      {/* Stats bar */}
+      <div style={{
+        borderTop: '1px solid rgba(255,255,255,0.08)',
+        padding: '40px clamp(24px, 8vw, 80px)',
+        background: 'rgba(0,0,0,0.3)',
+      }}>
+        <div style={{
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '8px',
-        }}
-      >
-        <div
-          style={{
-            width: '1px',
-            height: '48px',
-            background: 'linear-gradient(to bottom, rgba(201,169,110,0.5), transparent)',
-          }}
-        />
+          gap: '0',
+          maxWidth: '1400px',
+          margin: '0 auto',
+          flexWrap: 'wrap',
+        }}>
+          {[
+            { value: "UK + Int'l", label: 'Geographic Reach' },
+            { value: 'Long-Term', label: 'Capital Horizon' },
+            { value: 'Private', label: 'Family Ownership' },
+          ].map((stat, i) => (
+            <div key={i} style={{
+              flex: 1,
+              minWidth: '160px',
+              textAlign: 'center',
+              padding: '16px 24px',
+              borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.08)' : 'none',
+            }}>
+              <p style={{
+                fontFamily: 'Cormorant Garamond, Georgia, serif',
+                fontSize: '26px',
+                fontWeight: 700,
+                color: '#ffffff',
+                letterSpacing: '-0.5px',
+                marginBottom: '8px',
+              }}>{stat.value}</p>
+              <p style={{
+                fontFamily: 'Jost, system-ui, sans-serif',
+                fontSize: '11px',
+                fontWeight: 500,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: '#666666',
+              }}>{stat.label}</p>
+            </div>
+          ))}
+        </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .hero-inner { flex-direction: column !important; gap: 48px !important; padding-top: 120px !important; }
+          .hero-logo { display: none !important; }
+        }
+      `}</style>
     </section>
   )
 }

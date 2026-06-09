@@ -1,135 +1,48 @@
 const principles = [
-  {
-    index: '01',
-    title: 'Long-Term Orientation',
-    body:
-      'We measure success in decades, not quarters. Every capital allocation decision is made with the intent to create durable, compounding value — not to optimise for short-term appearance.',
-  },
-  {
-    index: '02',
-    title: 'Governance & Continuity',
-    body:
-      'We structure every holding for clarity of ownership, accountability, and consistent decision-making. Governance is not overhead — it is what allows businesses to grow without losing their identity.',
-  },
-  {
-    index: '03',
-    title: 'Execution-Led Building',
-    body:
-      'We do not invest passively and wait. We build actively: designing systems, deploying teams, and applying direct operational expertise to create businesses that perform.',
-  },
-  {
-    index: '04',
-    title: 'Discretion & Integrity',
-    body:
-      'We operate quietly. We do not seek public attention for its own sake, and we hold ourselves to a standard of professional conduct that needs no announcement.',
-  },
+  { index: '01', title: 'Long-Term Orientation', text: 'We prioritise durable value creation over short-term outcomes, building businesses designed to last decades.' },
+  { index: '02', title: 'Governance & Continuity', text: 'We structure for clarity, oversight and consistent decision-making across all portfolio holdings.' },
+  { index: '03', title: 'Execution-Led Building', text: 'We focus on fundamentals: strong operations, cash discipline and scalable business models.' },
+  { index: '04', title: 'Discretion & Integrity', text: 'We operate with confidentiality and professional standards in every business relationship.' },
 ]
 
 export default function Principles() {
   return (
-    <section
-      id="principles"
-      className="section"
-      style={{
-        padding: 'clamp(80px, 12vw, 160px) clamp(24px, 8vw, 120px)',
-        maxWidth: '1200px',
-        margin: '0 auto',
-      }}
-    >
-      {/* Header */}
-      <div style={{ marginBottom: '80px' }}>
-        <p
-          style={{
-            fontFamily: 'Jost, system-ui, sans-serif',
-            fontSize: '10px',
-            fontWeight: 400,
-            letterSpacing: '0.28em',
-            textTransform: 'uppercase',
-            color: '#C9A96E',
-            marginBottom: '20px',
-          }}
-        >
+    <section id="principles" className="section" style={{
+      padding: 'clamp(80px, 10vw, 120px) clamp(24px, 8vw, 80px)',
+      background: '#f8f8f8',
+    }}>
+      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+        <p style={{ fontFamily: 'Jost, system-ui, sans-serif', fontSize: '12px', fontWeight: 700, color: '#888888', letterSpacing: '0.24em', textTransform: 'uppercase', marginBottom: '20px' }}>
           How We Think
         </p>
-        <h2
-          style={{
-            fontFamily: 'Cormorant Garamond, Georgia, serif',
-            fontSize: 'clamp(36px, 5vw, 60px)',
-            fontWeight: 300,
-            lineHeight: 1.1,
-            color: '#F0EDE8',
-            letterSpacing: '-0.01em',
-            maxWidth: '600px',
-          }}
-        >
-          Discipline, Governance
-          <br />
-          <em style={{ fontStyle: 'italic' }}>&amp; Value Creation</em>
+        <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(36px, 5vw, 52px)', fontWeight: 700, lineHeight: 1.1, color: '#0a0a0a', letterSpacing: '-0.04em', marginBottom: '56px' }}>
+          Discipline, Governance<br />&amp; Value Creation
         </h2>
-      </div>
-
-      {/* Principles grid */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          gap: '48px',
-        }}
-      >
-        {principles.map((p) => (
-          <div key={p.index}>
-            {/* Index */}
-            <p
-              style={{
-                fontFamily: 'Cormorant Garamond, Georgia, serif',
-                fontSize: '13px',
-                fontWeight: 400,
-                letterSpacing: '0.1em',
-                color: 'rgba(201,169,110,0.4)',
-                marginBottom: '20px',
-              }}
-            >
-              {p.index}
-            </p>
-
-            {/* Gold rule */}
-            <div
-              style={{
-                width: '32px',
-                height: '1px',
-                background: 'rgba(201,169,110,0.3)',
-                marginBottom: '20px',
-              }}
-            />
-
-            {/* Title */}
-            <h3
-              style={{
-                fontFamily: 'Cormorant Garamond, Georgia, serif',
-                fontSize: '22px',
-                fontWeight: 400,
-                color: '#F0EDE8',
-                lineHeight: 1.2,
-                marginBottom: '16px',
-              }}
-            >
-              {p.title}
-            </h3>
-
-            {/* Body */}
-            <p
-              style={{
-                fontFamily: 'Inter, system-ui, sans-serif',
-                fontSize: '13px',
-                fontWeight: 300,
-                lineHeight: 1.75,
-                color: 'rgba(240,237,232,0.55)',
-              }}
-            >
-              {p.body}
-            </p>
-          </div>
-        ))}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+          {principles.map((p) => (
+            <div key={p.index} style={{
+              display: 'grid',
+              gridTemplateColumns: '80px 1fr',
+              gap: '40px',
+              padding: '48px 0',
+              borderBottom: '2px solid #dddddd',
+              alignItems: 'start',
+            }}>
+              <div style={{
+                width: '60px', height: '60px',
+                background: '#0a0a0a',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                flexShrink: 0,
+              }}>
+                <span style={{ fontFamily: 'Jost, system-ui, sans-serif', fontSize: '18px', fontWeight: 700, color: '#ffffff', letterSpacing: '0.06em' }}>{p.index}</span>
+              </div>
+              <div>
+                <h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(22px, 2.5vw, 28px)', fontWeight: 700, color: '#0a0a0a', letterSpacing: '-0.3px', marginBottom: '16px' }}>{p.title}</h3>
+                <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '17px', fontWeight: 400, lineHeight: 1.75, color: '#4a4a4a' }}>{p.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
