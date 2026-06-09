@@ -13,20 +13,20 @@ function LogoHorizontal({ color = '#ffffff', width = 280 }: { color?: string; wi
         <rect x="35" y="12" width="27.5" height="102.5" fill={color} />
         <rect x="-72.5" y="122" width="145" height="11" fill={color} />
         <g transform="translate(0, 220)">
-          <circle cx="0" cy="0" r="14" fill="transparent" stroke={color} strokeWidth="1.1" />
-          <g opacity="0.25">
-            <line x1="0" y1="-19" x2="0" y2="19" stroke={color} strokeWidth="5" strokeLinecap="round" />
-            <line x1="-19" y1="0" x2="19" y2="0" stroke={color} strokeWidth="5" strokeLinecap="round" />
+          <circle cx="0" cy="0" r="16" fill="rgba(0,0,0,0.85)" stroke={color} strokeWidth="1.1" />
+          <g opacity="0.18">
+            <line x1="0" y1="-22" x2="0" y2="22" stroke={color} strokeWidth="6" strokeLinecap="round" />
+            <line x1="-22" y1="0" x2="22" y2="0" stroke={color} strokeWidth="6" strokeLinecap="round" />
           </g>
-          <line x1="0" y1="-19" x2="0" y2="19" stroke={color} strokeWidth="1.1" strokeLinecap="round" />
-          <line x1="-19" y1="0" x2="19" y2="0" stroke={color} strokeWidth="1.1" strokeLinecap="round" />
-          <circle cx="0" cy="0" r="4.2" fill="none" stroke={color} strokeWidth="0.9" />
-          <circle cx="0"    cy="-6.1" r="1.85" fill={color} />
-          <circle cx="5.8"  cy="-1.9" r="1.85" fill={color} />
-          <circle cx="3.6"  cy="4.9"  r="1.85" fill={color} />
-          <circle cx="-3.6" cy="4.9"  r="1.85" fill={color} />
-          <circle cx="-5.8" cy="-1.9" r="1.85" fill={color} />
-          <circle cx="0" cy="0" r="1.3" fill={color} />
+          <line x1="0" y1="-22" x2="0" y2="22" stroke={color} strokeWidth="1.1" strokeLinecap="round" />
+          <line x1="-22" y1="0" x2="22" y2="0" stroke={color} strokeWidth="1.1" strokeLinecap="round" />
+          <circle cx="0" cy="0" r="4.8" fill="none" stroke={color} strokeWidth="0.9" />
+          <circle cx="0"    cy="-7"   r="2.1" fill={color} />
+          <circle cx="6.6"  cy="-2.1" r="2.1" fill={color} />
+          <circle cx="4.1"  cy="5.7"  r="2.1" fill={color} />
+          <circle cx="-4.1" cy="5.7"  r="2.1" fill={color} />
+          <circle cx="-6.6" cy="-2.1" r="2.1" fill={color} />
+          <circle cx="0" cy="0" r="1.5" fill={color} />
         </g>
       </g>
       <g transform="translate(220, 0)">
