@@ -116,11 +116,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Stats bar */}
-      <div style={{
-        borderTop: '1px solid rgba(255,255,255,0.07)',
-        background: 'rgba(255,255,255,0.02)',
-      }}>
+      {/* Stats bar — blanco con borde dorado, transición limpia al About */}
+      <div style={{ background: '#ffffff', borderTop: '3px solid #C9A96E' }}>
         <div style={{
           display: 'flex',
           maxWidth: '1600px',
@@ -136,13 +133,13 @@ export default function Hero() {
               flex: 1,
               padding: '36px 24px',
               textAlign: 'center',
-              borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.07)' : 'none',
+              borderLeft: i > 0 ? '1px solid rgba(0,0,0,0.08)' : 'none',
             }}>
               <p style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontSize: '24px',
+                fontSize: '28px',
                 fontWeight: 600,
-                color: '#ffffff',
+                color: '#0a0a0a',
                 marginBottom: '6px',
                 letterSpacing: '0.02em',
               }}>{stat.value}</p>
@@ -152,7 +149,7 @@ export default function Hero() {
                 fontWeight: 500,
                 letterSpacing: '0.22em',
                 textTransform: 'uppercase',
-                color: '#555555',
+                color: '#888888',
               }}>{stat.label}</p>
             </div>
           ))}
