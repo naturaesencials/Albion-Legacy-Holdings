@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Albion Legacy Holdings | Private Investment Holding · London',
-  description: 'Albion Legacy Holdings is a UK-incorporated, privately held investment holding company deploying long-term capital across operating businesses, digital ventures, and strategic assets.',
+  description: 'Albion Legacy Holdings — a privately held UK company. We build, own and govern businesses for the long term, with our own capital, on our own terms.',
   keywords: 'Albion Legacy Holdings, private holding company, UK investment holding, family office, long-term capital, digital ventures',
   authors: [{ name: 'Albion Legacy Holdings Ltd' }],
   openGraph: {
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     url: 'https://www.albionlegacy.com',
     siteName: 'Albion Legacy Holdings',
     title: 'Albion Legacy Holdings | Private Investment Holding · London',
-    description: 'A UK-incorporated, privately held investment holding company deploying long-term capital across operating businesses, digital ventures, and strategic assets.',
+    description: 'A privately held UK holding company. Building, owning and governing businesses for the long term — with our own capital, on our own terms.',
     images: [{ url: 'https://www.albionlegacy.com/og-image.jpg', width: 1200, height: 630, alt: 'Albion Legacy Holdings' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Albion Legacy Holdings | Private Investment Holding · London',
-    description: 'A UK-incorporated, privately held investment holding company deploying long-term capital across operating businesses, digital ventures, and strategic assets.',
+    description: 'A privately held UK holding company. Building, owning and governing businesses for the long term — with our own capital, on our own terms.',
   },
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://www.albionlegacy.com' },

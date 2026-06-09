@@ -34,11 +34,11 @@ export default function About() {
             fontSize: '17px', fontWeight: 300,
             lineHeight: 1.9, color: '#4a4a4a',
           }}>
-            Albion Legacy Holdings is a UK-incorporated, privately held holding company.
-            Its capital is its own. Its decisions are taken with a long horizon and
-            without the pressure of external mandates. Every business within the
-            portfolio is governed directly — built from the ground up or expanded
-            with operational rigour applied at every level.
+            Albion Legacy Holdings is a UK-incorporated, privately held holding company
+            building long-term value through disciplined ownership. Its capital is its own.
+            Its decisions are taken with a long horizon and without the pressure of
+            external mandates. Every business within the portfolio is governed directly —
+            built from the ground up or expanded with operational rigour applied at every level.
           </p>
 
           <p style={{
