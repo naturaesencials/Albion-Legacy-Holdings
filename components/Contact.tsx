@@ -109,7 +109,7 @@ export default function Contact() {
           © {new Date().getFullYear()} Albion Legacy Holdings Ltd · 71-75 Shelton Street, Covent Garden, London WC2H 9JQ
         </p>
         <a
-          href="https://www.linkedin.com/company/albion-legacy-holdings"
+          href="https://linkedin.com/company/albion-legacy-holdings"
           target="_blank"
           rel="noopener noreferrer"
           style={{

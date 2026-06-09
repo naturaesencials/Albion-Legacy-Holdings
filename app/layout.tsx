@@ -32,7 +32,7 @@ const orgSchema = {
   description: 'A UK-incorporated, privately held investment holding company deploying long-term capital across operating businesses, digital ventures, and international assets.',
   address: { '@type': 'PostalAddress', streetAddress: '66 Paul Street', addressLocality: 'London', postalCode: 'EC2A 4NA', addressCountry: 'GB' },
   areaServed: 'Worldwide',
-  sameAs: ['https://www.linkedin.com/company/albion-legacy-holdings', 'https://albionwealth.app', 'https://albionbusinesshub.app', 'https://naturaesencials.com'],
+  sameAs: ['https://linkedin.com/company/albion-legacy-holdings', 'https://albionwealth.app', 'https://albionbusinesshub.app', 'https://naturaesencials.com'],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
