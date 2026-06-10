@@ -101,13 +101,33 @@ export default function Contact() {
         flexWrap: 'wrap',
         gap: '16px',
       }}>
-        <p style={{
-          fontFamily: "'Inter', system-ui, sans-serif",
-          fontSize: '12px', fontWeight: 300,
-          color: '#888888', letterSpacing: '0.03em',
-        }}>
-          © {new Date().getFullYear()} Albion Legacy Holdings Ltd · 71-75 Shelton Street, Covent Garden, London WC2H 9JQ
-        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <p style={{
+            fontFamily: "'Inter', system-ui, sans-serif",
+            fontSize: '12px', fontWeight: 300,
+            color: '#888888', letterSpacing: '0.03em',
+          }}>
+            © {new Date().getFullYear()} Albion Legacy Holdings Ltd · 71-75 Shelton Street, Covent Garden, London WC2H 9JQ
+          </p>
+          <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+            {[
+              { label: 'Privacy Policy', href: '/privacy' },
+              { label: 'Terms of Use', href: '/terms' },
+              { label: 'Cookie Policy', href: '/cookies' },
+            ].map((link) => (
+              <a key={link.href} href={link.href} style={{
+                fontFamily: "'Jost', system-ui, sans-serif",
+                fontSize: '10px', fontWeight: 400,
+                letterSpacing: '0.12em', textTransform: 'uppercase',
+                color: '#444444', textDecoration: 'none',
+                transition: 'color 0.2s',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#888888')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#444444')}
+              >{link.label}</a>
+            ))}
+          </div>
+        </div>
         <a
           href="https://linkedin.com/company/albion-legacy-holdings"
           target="_blank"
