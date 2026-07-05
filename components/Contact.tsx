@@ -107,7 +107,7 @@ export default function Contact() {
             fontSize: '12px', fontWeight: 300,
             color: '#888888', letterSpacing: '0.03em',
           }}>
-            © {new Date().getFullYear()} Albion Legacy Holdings Ltd 
+            © {new Date().getFullYear()} Albion Legacy Holdings Ltd · London, United Kingdom 
           </p>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
             {[
