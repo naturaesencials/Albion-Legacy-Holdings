@@ -46,7 +46,7 @@ export default function TermsOfUse() {
     },
     {
       title: '12. Contact',
-      body: `Albion Legacy Holdings Ltd\n71-75 Shelton Street, Covent Garden\nLondon WC2H 9JQ, United Kingdom\ncontact@albionlegacy.com`,
+      body: `Albion Legacy Holdings Ltd\nLondon, United Kingdom\ncontact@albionlegacy.com`,
     },
   ]
 

@@ -107,7 +107,7 @@ export default function Contact() {
             fontSize: '12px', fontWeight: 300,
             color: '#888888', letterSpacing: '0.03em',
           }}>
-            © {new Date().getFullYear()} Albion Legacy Holdings Ltd · 71-75 Shelton Street, Covent Garden, London WC2H 9JQ
+            © {new Date().getFullYear()} Albion Legacy Holdings Ltd 
           </p>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
             {[

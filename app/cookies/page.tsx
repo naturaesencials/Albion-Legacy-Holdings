@@ -26,7 +26,7 @@ export default function CookiePolicy() {
     },
     {
       title: '7. Contact',
-      body: `For any questions regarding our use of cookies:\n\nAlbion Legacy Holdings Ltd\n71-75 Shelton Street, Covent Garden\nLondon WC2H 9JQ, United Kingdom\ncontact@albionlegacy.com`,
+      body: `For any questions regarding our use of cookies:\n\nAlbion Legacy Holdings Ltd\nLondon, United Kingdom\ncontact@albionlegacy.com`,
     },
   ]
 

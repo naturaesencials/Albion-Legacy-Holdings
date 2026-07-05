@@ -2,7 +2,7 @@ export default function PrivacyPolicy() {
   const sections = [
     {
       title: '1. Who We Are',
-      body: `Albion Legacy Holdings Ltd ("Albion Legacy Holdings", "we", "us", "our") is a private limited company registered in England and Wales. Registered address: 71-75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom.\n\nFor any data protection matter, contact us at: contact@albionlegacy.com`,
+      body: `Albion Legacy Holdings Ltd ("Albion Legacy Holdings", "we", "us", "our") is a private limited company registered in England and Wales. Registered address: London, United Kingdom.\n\nFor any data protection matter, contact us at: contact@albionlegacy.com`,
     },
     {
       title: '2. Scope of This Policy',
@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
     },
     {
       title: '12. Contact',
-      body: `Albion Legacy Holdings Ltd\n71-75 Shelton Street, Covent Garden\nLondon WC2H 9JQ, United Kingdom\ncontact@albionlegacy.com`,
+      body: `Albion Legacy Holdings Ltd\nLondon, United Kingdom\ncontact@albionlegacy.com`,
     },
   ]
 
